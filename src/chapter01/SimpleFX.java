@@ -103,19 +103,19 @@ public class SimpleFX extends Application {
     mainPane.setBottom(hBox);
     Scene scene = new Scene(mainPane, 700, 400);
 
-    scene.set
-    scene.getAccelerators().put(new KeyCombination() {
-      @Override
-      public boolean match(KeyEvent event) {
-        return super.match(event);
-      }
-    }, new Runnable() {
-      public void run() {
-        String msg = tfSend.getText();
-        taDisplay.appendText("echo:" + msg + "\n");
-        tfSend.clear();
-      }
-    });
+//    scene.set
+//    scene.getAccelerators().put(new KeyCombination() {
+//      @Override
+//      public boolean match(KeyEvent event) {
+//        return super.match(event);
+//      }
+//    }, new Runnable() {
+//      public void run() {
+//        String msg = tfSend.getText();
+//        taDisplay.appendText("echo:" + msg + "\n");
+//        tfSend.clear();
+//      }
+//    });
 
     primaryStage.setScene(scene);
     primaryStage.show();
