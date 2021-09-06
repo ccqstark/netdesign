@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="测试多电脑">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/netdesign/chapter01/SimpleFX.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/netdesign/chapter01/SimpleFX.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter01/SimpleFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter01/SimpleFX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter01/TextFileIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter01/TextFileIO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,8 +164,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1630896506768</updated>
-      <workItem from="1630919309555" duration="720000" />
+      <workItem from="1630919309555" duration="1076000" />
+      <workItem from="1630935581658" duration="913000" />
     </task>
+    <task id="LOCAL-00001" summary="测试多电脑">
+      <created>1630922423339</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1630922423339</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -212,6 +222,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="测试多电脑" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试多电脑" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/jdk1.8.0_261_32bit/javafx-src.zip!/javafx/scene/control/ButtonBase.java">
