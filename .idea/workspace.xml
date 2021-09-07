@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="测试多电脑">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="完成shift+enter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/netdesign/chapter01/SimpleFX.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/netdesign/chapter01/SimpleFX.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chapter01/SimpleFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter01/SimpleFX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter01/TextFileIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter01/TextFileIO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +118,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1630901749081" />
@@ -165,7 +164,7 @@
       <option name="presentableId" value="Default" />
       <updated>1630896506768</updated>
       <workItem from="1630919309555" duration="1076000" />
-      <workItem from="1630935581658" duration="913000" />
+      <workItem from="1630935581658" duration="3372000" />
     </task>
     <task id="LOCAL-00001" summary="测试多电脑">
       <created>1630922423339</created>
@@ -174,7 +173,21 @@
       <option name="project" value="LOCAL" />
       <updated>1630922423339</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="完成shift+enter">
+      <created>1630938133497</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1630938133497</updated>
+    </task>
+    <task id="LOCAL-00003" summary="完成shift+enter">
+      <created>1630938159880</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1630938159880</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -226,7 +239,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="测试多电脑" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试多电脑" />
+    <MESSAGE value="完成shift+enter" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成shift+enter" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/jdk1.8.0_261_32bit/javafx-src.zip!/javafx/scene/control/ButtonBase.java">
