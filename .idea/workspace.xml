@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="完成shift+enter">
+    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="KeyCodeCombination">
+      <change afterPath="$PROJECT_DIR$/src/chapter02/TCPClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter02/TCPClientFX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter02/TCPServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/netdesign/chapter01/SimpleFX.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/netdesign/chapter01/SimpleFX.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter01/SimpleFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter01/SimpleFX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/netdesign/chapter01/TextFileIO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/netdesign/chapter01/TextFileIO.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,12 +129,13 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.14222223" />
     <property name="project.structure.side.proportion" value="0.27147403" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.TCPClientFX">
     <configuration name="SimpleFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chapter01.SimpleFX" />
       <module name="netdesign" />
@@ -146,8 +149,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TCPClientFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter02.TCPClientFX" />
+      <module name="netdesign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TCPServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter02.TCPServer" />
+      <module name="netdesign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TCPClientFX" />
+        <item itemvalue="Application.TCPServer" />
         <item itemvalue="Application.SimpleFX" />
       </list>
     </recent_temporary>
@@ -164,7 +195,9 @@
       <option name="presentableId" value="Default" />
       <updated>1630896506768</updated>
       <workItem from="1630919309555" duration="1076000" />
-      <workItem from="1630935581658" duration="3372000" />
+      <workItem from="1630935581658" duration="3797000" />
+      <workItem from="1630992881080" duration="488000" />
+      <workItem from="1631245130455" duration="7109000" />
     </task>
     <task id="LOCAL-00001" summary="测试多电脑">
       <created>1630922423339</created>
@@ -187,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630938159880</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="KeyCodeCombination">
+      <created>1630987159958</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1630987159958</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -240,7 +280,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="测试多电脑" />
     <MESSAGE value="完成shift+enter" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成shift+enter" />
+    <MESSAGE value="KeyCodeCombination" />
+    <option name="LAST_COMMIT_MESSAGE" value="KeyCodeCombination" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/jdk1.8.0_261_32bit/javafx-src.zip!/javafx/scene/control/ButtonBase.java">
