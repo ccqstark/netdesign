@@ -25,6 +25,9 @@ public class TCPClientFX extends Application {
     private final Button btnSave = new Button("保存");
     private final Button btnConnect = new Button("连接");
 
+    // 记录连接状态
+    private static boolean connectState = false;
+
     //待发送信息的文本框
     private final TextField tfSend = new TextField();
     //显示信息的文本区域
@@ -50,7 +53,18 @@ public class TCPClientFX extends Application {
     }
 
     public void sendSocketMsg() {
+        if (!connectState) {
+            taDisplay.appendText("未连接服务器\n");
+            tfSend.clear();
+            return;
+        }
+
         String sendMsg = tfSend.getText();
+        if (sendMsg.equals("bye")) {
+            // 断开连接 重新启用按钮
+            btnConnect.setDisable(false);
+            connectState = false;
+        }
         tcpClient.send(sendMsg);
         taDisplay.appendText("客户端发送: " + sendMsg + "\n");
 
@@ -101,6 +115,10 @@ public class TCPClientFX extends Application {
                 // 成功连接服务器接收欢迎信息
                 String firstMsg = tcpClient.receive();
                 taDisplay.appendText(firstMsg + "\n");
+                // 改变连接状态
+                connectState = true;
+                // 禁用按钮
+                btnConnect.setDisable(true);
             } catch (IOException e) {
                 taDisplay.appendText("服务器连接失败!" + e.getMessage() + "\n");
             }

@@ -52,7 +52,7 @@ public class TCPServer {
                         break; // 结束循环
                     }
                     // 向输出流中输出一行字符串，远程客户端可以读取该字符串
-                    pw.println("From服务器: " + msg);
+                    pw.println("From服务器: " + msg.replace("吗?", "!"));
                 }
             } catch (IOException e) {
                 e.printStackTrace();

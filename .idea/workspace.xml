@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="KeyCodeCombination">
-      <change afterPath="$PROJECT_DIR$/src/chapter02/TCPClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter02/TCPClientFX.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter02/TCPServer.java" afterDir="false" />
+    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="feat:chapter02预习完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/netdesign/chapter01/TextFileIO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/netdesign/chapter01/TextFileIO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter02/TCPClientFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter02/TCPClientFX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter02/TCPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter02/TCPServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +131,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.14222223" />
     <property name="project.structure.side.proportion" value="0.27147403" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RunManager" selected="Application.TCPClientFX">
     <configuration name="SimpleFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -197,7 +195,9 @@
       <workItem from="1630919309555" duration="1076000" />
       <workItem from="1630935581658" duration="3797000" />
       <workItem from="1630992881080" duration="488000" />
-      <workItem from="1631245130455" duration="7109000" />
+      <workItem from="1631245130455" duration="7179000" />
+      <workItem from="1631413464668" duration="96000" />
+      <workItem from="1631500724580" duration="2293000" />
     </task>
     <task id="LOCAL-00001" summary="测试多电脑">
       <created>1630922423339</created>
@@ -227,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630987159958</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat:chapter02预习完成">
+      <created>1631256213866</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1631256213866</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -281,7 +288,9 @@
     <MESSAGE value="测试多电脑" />
     <MESSAGE value="完成shift+enter" />
     <MESSAGE value="KeyCodeCombination" />
-    <option name="LAST_COMMIT_MESSAGE" value="KeyCodeCombination" />
+    <MESSAGE value="feat:charter02预习完成" />
+    <MESSAGE value="feat:chapter02预习完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:chapter02预习完成" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/jdk1.8.0_261_32bit/javafx-src.zip!/javafx/scene/control/ButtonBase.java">
