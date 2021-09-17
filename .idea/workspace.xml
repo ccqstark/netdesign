@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="feat:chapter02预习完成">
+    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="feat:chapter02扩展练习完成">
+      <change afterPath="$PROJECT_DIR$/src/chapter03/TCPClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter03/TCPClientThreadFX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter03/TCPServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter02/TCPClientFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter02/TCPClientFX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter02/TCPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter02/TCPServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +123,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1630901749081" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/chapter03" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -131,9 +132,15 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.14222223" />
     <property name="project.structure.side.proportion" value="0.27147403" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.TCPClientFX">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/chapter03" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TCPClientThreadFX">
     <configuration name="SimpleFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chapter01.SimpleFX" />
       <module name="netdesign" />
@@ -160,6 +167,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TCPClientThreadFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter03.TCPClientThreadFX" />
+      <module name="netdesign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter03.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TCPServer (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter03.TCPServer" />
+      <module name="netdesign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter03.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TCPServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chapter02.TCPServer" />
       <module name="netdesign" />
@@ -173,8 +206,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TCPServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter03.TCPServer" />
+      <module name="netdesign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter03.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TCPClientThreadFX" />
+        <item itemvalue="Application.TCPServer (1)" />
         <item itemvalue="Application.TCPClientFX" />
         <item itemvalue="Application.TCPServer" />
         <item itemvalue="Application.SimpleFX" />
@@ -197,7 +245,9 @@
       <workItem from="1630992881080" duration="488000" />
       <workItem from="1631245130455" duration="7179000" />
       <workItem from="1631413464668" duration="96000" />
-      <workItem from="1631500724580" duration="2293000" />
+      <workItem from="1631500724580" duration="8453000" />
+      <workItem from="1631783908930" duration="318000" />
+      <workItem from="1631864582095" duration="1105000" />
     </task>
     <task id="LOCAL-00001" summary="测试多电脑">
       <created>1630922423339</created>
@@ -234,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631256213866</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat:chapter02扩展练习完成">
+      <created>1631503783258</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1631503783258</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -290,7 +347,8 @@
     <MESSAGE value="KeyCodeCombination" />
     <MESSAGE value="feat:charter02预习完成" />
     <MESSAGE value="feat:chapter02预习完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:chapter02预习完成" />
+    <MESSAGE value="feat:chapter02扩展练习完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:chapter02扩展练习完成" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/jdk1.8.0_261_32bit/javafx-src.zip!/javafx/scene/control/ButtonBase.java">
