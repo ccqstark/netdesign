@@ -1,6 +1,7 @@
-package chapter03;
+package lookupscore;
 
 import chapter01.TextFileIO;
+import chapter03.TCPClient;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.geometry.Insets;
@@ -18,9 +19,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
-import static java.lang.Thread.sleep;
-
-public class TCPClientThreadFX extends Application {
+public class LookUpScoreFX extends Application {
 
     private final Button btnExit = new Button("退出");
     private final Button btnSend = new Button("发送");
@@ -43,23 +42,13 @@ public class TCPClientThreadFX extends Application {
     // TCP客户端
     private TCPClient tcpClient;
 
-    // 线程
-    private Thread receiveThread;
-
     public static void main(String[] args) {
         launch(args);
     }
 
-    public void exitSocket() throws InterruptedException {
+    public void exitSocket() {
         if (tcpClient != null) {
             tcpClient.send("bye");
-            // 避免tcpClient关闭后，子线程还在读取导致错误
-            // 方法1：主线程sleep
-//            sleep(500);
-            // 方法2：interrupt结束子线程
-            receiveThread.interrupt();
-            receiveThread.join();
-
             tcpClient.close();
         }
         System.exit(0);
@@ -91,11 +80,7 @@ public class TCPClientThreadFX extends Application {
 
         // 事件
         btnExit.setOnAction((event) -> {
-                    try {
-                        exitSocket();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                    exitSocket();
                 }
         );
         btnSend.setOnAction((event) -> {
@@ -176,37 +161,29 @@ public class TCPClientThreadFX extends Application {
         primaryStage.setScene(scene);
 
         primaryStage.setOnCloseRequest(event -> {
-            try {
-                exitSocket();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            exitSocket();
         });
 
+        primaryStage.setTitle("登录查成绩");
         primaryStage.show();
 
     }
 
     // 启动一个线程来接受信息，解决主线程阻塞和多行读取的问题
     public void startReceiveThread() {
-        receiveThread = new Thread(() -> {
+        Thread receiveThread = new Thread(() -> {
             String msg = null;
-            try {
-                while ((msg = tcpClient.receive()) != null) {
-                    // 有效final使得lambda可以访问外部的局部变量
-                    String msgTemp = msg;
-                    Platform.runLater(() -> {
-                        taDisplay.appendText(msgTemp + "\n");
-                    });
-                    sleep(1);
-                }
-            } catch (InterruptedException e) {
-                System.out.println("子线程结束");
-                // 跳出循环
+            while ((msg = tcpClient.receive()) != null) {
+                // 有效final使得lambda可以访问外部的局部变量
+                String msgTemp = msg;
                 Platform.runLater(() -> {
-                    taDisplay.appendText("对话已关闭!\n");
+                    taDisplay.appendText(msgTemp + "\n");
                 });
             }
+            // 跳出循环
+            Platform.runLater(() -> {
+                taDisplay.appendText("对话已关闭!\n");
+            });
         });
         receiveThread.start();
     }

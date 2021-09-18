@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="feat:chapter02扩展练习完成">
-      <change afterPath="$PROJECT_DIR$/src/chapter03/TCPClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter03/TCPClientThreadFX.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter03/TCPServer.java" afterDir="false" />
+    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="feat:chapter03预习完成">
+      <change afterPath="$PROJECT_DIR$/src/lookupscore/LookUpScore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lookupscore/LookUpScoreFX.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chapter03/TCPClientThreadFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter03/TCPClientThreadFX.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,13 +140,13 @@
       <recent name="$PROJECT_DIR$/src/chapter03" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TCPClientThreadFX">
-    <configuration name="SimpleFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chapter01.SimpleFX" />
+  <component name="RunManager" selected="Application.LookUpScoreFX">
+    <configuration name="LookUpScoreFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lookupscore.LookUpScoreFX" />
       <module name="netdesign" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter01.*" />
+          <option name="PATTERN" value="lookupscore.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -221,11 +221,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LookUpScoreFX" />
         <item itemvalue="Application.TCPClientThreadFX" />
         <item itemvalue="Application.TCPServer (1)" />
         <item itemvalue="Application.TCPClientFX" />
         <item itemvalue="Application.TCPServer" />
-        <item itemvalue="Application.SimpleFX" />
       </list>
     </recent_temporary>
   </component>
@@ -247,7 +247,8 @@
       <workItem from="1631413464668" duration="96000" />
       <workItem from="1631500724580" duration="8453000" />
       <workItem from="1631783908930" duration="318000" />
-      <workItem from="1631864582095" duration="1105000" />
+      <workItem from="1631864582095" duration="4731000" />
+      <workItem from="1631931407973" duration="4708000" />
     </task>
     <task id="LOCAL-00001" summary="测试多电脑">
       <created>1630922423339</created>
@@ -291,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631503783258</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat:chapter03预习完成">
+      <created>1631865772339</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1631865772339</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -348,7 +356,8 @@
     <MESSAGE value="feat:charter02预习完成" />
     <MESSAGE value="feat:chapter02预习完成" />
     <MESSAGE value="feat:chapter02扩展练习完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:chapter02扩展练习完成" />
+    <MESSAGE value="feat:chapter03预习完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:chapter03预习完成" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/jdk1.8.0_261_32bit/javafx-src.zip!/javafx/scene/control/ButtonBase.java">
