@@ -1,58 +1,64 @@
-package lookupscore;
+package chapter04.client;
 
 import chapter01.TextFileIO;
-import chapter03.TCPClient;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.*;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
 import static java.lang.Thread.sleep;
 
-public class LookUpScoreFX extends Application {
+public class FileClientFX extends Application {
 
     private final Button btnExit = new Button("退出");
     private final Button btnSend = new Button("发送");
-    private final Button btnOpen = new Button("加载");
-    private final Button btnSave = new Button("保存");
+    private final Button btnDownload = new Button("下载");
     private final Button btnConnect = new Button("连接");
 
     // 记录连接状态
     private static boolean connectState = false;
 
     //待发送信息的文本框
-    private final TextField tfSend = new TextField("20191002914&陈楚权&netdesign");
+    private final TextField tfSend = new TextField();
     //显示信息的文本区域
     private final TextArea taDisplay = new TextArea();
     // IP地址输入框
-    private final TextField ipInput = new TextField("202.116.195.71");
+    private final TextField ipInput = new TextField();
     // 端口输入框
-    private final TextField portInput = new TextField("9009");
+    private final TextField portInput = new TextField();
 
     // TCP客户端
-    private TCPClient tcpClient;
+    private FileDialogClient fileDialogClient;
+
+    // 线程
+    private Thread receiveThread;
 
     public static void main(String[] args) {
         launch(args);
     }
 
     public void exitSocket() throws InterruptedException {
-        if (tcpClient != null) {
-            tcpClient.send("bye");
-            sleep(500);
-            tcpClient.close();
+        if (fileDialogClient != null) {
+            fileDialogClient.send("bye");
+            // 避免tcpClient关闭后，子线程还在读取导致错误
+            // 方法1：主线程sleep
+//            sleep(500);
+            // 方法2：interrupt结束子线程
+            receiveThread.interrupt();
+            receiveThread.join();
+
+            fileDialogClient.close();
         }
         System.exit(0);
     }
@@ -70,7 +76,7 @@ public class LookUpScoreFX extends Application {
             btnConnect.setDisable(false);
             connectState = false;
         }
-        tcpClient.send(sendMsg);
+        fileDialogClient.send(sendMsg);
         taDisplay.appendText("客户端发送: " + sendMsg + "\n");
 
 //        String receiveMsg = tcpClient.receive();
@@ -93,19 +99,6 @@ public class LookUpScoreFX extends Application {
         btnSend.setOnAction((event) -> {
             sendSocketMsg();
         });
-        TextFileIO textFileIO = new TextFileIO();
-        btnSave.setOnAction((event) ->
-                textFileIO.append(
-                        LocalDateTime.now().withNano(0) + " " + taDisplay.getText()
-                )
-        );
-        btnOpen.setOnAction(event -> {
-            String msg = textFileIO.load();
-            if (msg != null) {
-                taDisplay.clear();
-                taDisplay.setText(msg);
-            }
-        });
 
         // 快捷键监听
         tfSend.setOnKeyPressed((KeyEvent keyEvent) -> {
@@ -120,18 +113,35 @@ public class LookUpScoreFX extends Application {
             String ip = ipInput.getText().trim();
             String port = portInput.getText().trim();
             try {
-                tcpClient = new TCPClient(ip, port);
+                fileDialogClient = new FileDialogClient(ip, port);
                 // 成功连接服务器接收欢迎信息
-                String firstMsg = tcpClient.receive();
+                String firstMsg = fileDialogClient.receive();
                 taDisplay.appendText(firstMsg + "\n");
                 // 改变连接状态
                 connectState = true;
                 // 禁用按钮
                 btnConnect.setDisable(true);
-                startReceiveThread();
+                receiveThread = new Thread(new ReceiveHandler(), "my-receiveThread");
+                receiveThread.start();
             } catch (IOException e) {
                 taDisplay.appendText("服务器连接失败!" + e.getMessage() + "\n");
             }
+        });
+
+        /**
+         * 下载按钮事件触发
+         */
+        btnDownload.setOnAction(event -> {
+            downloadFile();
+        });
+
+        /**
+         * 拖动选中文字自动同步到输入域
+         */
+        taDisplay.selectionProperty().addListener((observable, oldValue, newValue) -> {
+            //只有当鼠标拖动选中了文字才复制内容
+            if (!taDisplay.getSelectedText().equals(""))
+                tfSend.setText(taDisplay.getSelectedText());
         });
 
         BorderPane mainPane = new BorderPane();
@@ -161,7 +171,7 @@ public class LookUpScoreFX extends Application {
         hBox.setSpacing(10);
         hBox.setPadding(new Insets(10, 20, 10, 20));
         hBox.setAlignment(Pos.CENTER_RIGHT);
-        hBox.getChildren().addAll(btnSend, btnSave, btnOpen, btnExit);
+        hBox.getChildren().addAll(btnSend, btnDownload, btnExit);
         mainPane.setBottom(hBox);
         Scene scene = new Scene(mainPane, 700, 400);
 
@@ -175,28 +185,67 @@ public class LookUpScoreFX extends Application {
             }
         });
 
-        primaryStage.setTitle("登录查成绩");
         primaryStage.show();
-
     }
 
-    // 启动一个线程来接受信息，解决主线程阻塞和多行读取的问题
-    public void startReceiveThread() {
-        Thread receiveThread = new Thread(() -> {
+    /**
+     * 下载文件方法
+     */
+    public void downloadFile() {
+        if (tfSend.getText().equals("")) //没有输入文件名则返回
+            return;
+        String fName = tfSend.getText().trim();
+        tfSend.clear();
+
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setInitialFileName(fName);
+        File saveFile = fileChooser.showSaveDialog(null);
+        if (saveFile == null) {
+            return;//用户放弃操作则返回
+        }
+        try {
+            //数据端口是2020
+            boolean success = new FileDataClient(ipInput.getText(), "2020").getFile(saveFile);
+            Alert alert;
+            if (success){
+                alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setContentText(saveFile.getName() + " 下载完毕！");
+            }else {
+                alert = new Alert(Alert.AlertType.WARNING);
+                alert.setContentText("文件不存在或文件为空！");
+            }
+            alert.showAndWait();
+            //通知服务器已经完成了下载动作，不发送的话，服务器不能提供有效反馈信息
+            fileDialogClient.send("客户端开启下载");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 接受信息的线程的run方法
+     */
+    class ReceiveHandler implements Runnable {
+        @Override
+        public void run() {
             String msg = null;
-            while ((msg = tcpClient.receive()) != null) {
-                // 有效final使得lambda可以访问外部的局部变量
-                String msgTemp = msg;
+            try {
+                while ((msg = fileDialogClient.receive()) != null) {
+                    // 有效final使得lambda可以访问外部的局部变量
+                    String msgTemp = msg;
+                    Platform.runLater(() -> {
+                        taDisplay.appendText(msgTemp + "\n");
+                    });
+                    sleep(1);
+                }
+            } catch (InterruptedException e) {
+                System.out.println("子线程结束");
+                // 跳出循环
                 Platform.runLater(() -> {
-                    taDisplay.appendText(msgTemp + "\n");
+                    taDisplay.appendText("对话已关闭!\n");
                 });
             }
-            // 跳出循环
-            Platform.runLater(() -> {
-                taDisplay.appendText("对话已关闭!\n");
-            });
-        });
-        receiveThread.start();
+        }
     }
 
 }
