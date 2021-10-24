@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="feat:chapter06UDP">
-      <change afterPath="$PROJECT_DIR$/src/chapter06/Multicast.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter06/MulticastFX.java" afterDir="false" />
+    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="feat:chapter06组播">
+      <change afterPath="$PROJECT_DIR$/src/chapter07/BASE64.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter07/TCPClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter07/TCPMailClientFX1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,10 +152,24 @@
       <recent name="$PROJECT_DIR$/src/chapter03" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="chapter07" />
       <recent name="chapter05" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MulticastFX">
+  <component name="RunManager" selected="Application.TCPMailClientFX1">
+    <configuration name="BASE64" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter07.BASE64" />
+      <module name="netdesign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter07.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LookUpScoreFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lookupscore.LookUpScoreFX" />
       <module name="netdesign" />
@@ -183,19 +198,6 @@
       </method>
     </configuration>
     <configuration name="TCPClientThreadFX" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chapter03.TCPClientThreadFX" />
-      <module name="netdesign" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chapter03.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TCPClientThreadFX" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chapter05.TCPClientThreadFX" />
       <module name="netdesign" />
       <extension name="coverage">
@@ -208,12 +210,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UDPClientFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chapter06.UDPClientFX" />
+    <configuration name="TCPMailClientFX1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter07.TCPMailClientFX1" />
       <module name="netdesign" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter06.*" />
+          <option name="PATTERN" value="chapter07.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -235,19 +237,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.TCPClientThreadFX" />
       <item itemvalue="Application.LookUpScoreFX" />
-      <item itemvalue="Application.UDPClientFX" />
       <item itemvalue="Application.UDPServer" />
       <item itemvalue="Application.MulticastFX" />
+      <item itemvalue="Application.BASE64" />
+      <item itemvalue="Application.TCPMailClientFX1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TCPMailClientFX1" />
+        <item itemvalue="Application.BASE64" />
         <item itemvalue="Application.MulticastFX" />
         <item itemvalue="Application.LookUpScoreFX" />
         <item itemvalue="Application.UDPServer" />
-        <item itemvalue="Application.UDPClientFX" />
-        <item itemvalue="Application.TCPClientThreadFX" />
       </list>
     </recent_temporary>
   </component>
@@ -275,7 +277,8 @@
       <workItem from="1632674517189" duration="1776000" />
       <workItem from="1632703750250" duration="16622000" />
       <workItem from="1633920662649" duration="10718000" />
-      <workItem from="1634523446000" duration="5562000" />
+      <workItem from="1634523446000" duration="5917000" />
+      <workItem from="1635080361248" duration="5547000" />
     </task>
     <task id="LOCAL-00001" summary="测试多电脑">
       <created>1630922423339</created>
@@ -354,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634526811288</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat:chapter06组播">
+      <created>1634529287225</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1634529287225</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -416,7 +426,8 @@
     <MESSAGE value="feat:chapter04文件下载" />
     <MESSAGE value="feat:chapter05群发服务器" />
     <MESSAGE value="feat:chapter06UDP" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:chapter06UDP" />
+    <MESSAGE value="feat:chapter06组播" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:chapter06组播" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/jdk1.8.0_261_32bit/javafx-src.zip!/javafx/scene/control/ButtonBase.java">
