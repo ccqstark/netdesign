@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 
 import static java.lang.Thread.sleep;
 
-public class TCPMailClientFX1 extends Application {
+public class TCPMailClientFX2 extends Application {
 
     private final Button btnExit = new Button("退出");
     private final Button btnSend = new Button("发送");
@@ -32,19 +32,26 @@ public class TCPMailClientFX1 extends Application {
     private static boolean connectState = false;
 
     //待发送信息的文本框
-    private final TextField tfSend = new TextField();
+    private final TextArea tfSend = new TextArea("20191002914&陈楚权");
     //显示信息的文本区域
     private final TextArea taDisplay = new TextArea();
     // IP地址输入框
     private final TextField ipInput = new TextField("smtp.qq.com");
     // 端口输入框
     private final TextField portInput = new TextField("25");
+    // 邮件相关信息输入框
+    private final TextField sendEmailInput = new TextField("1367305698@qq.com");
+    private final TextField receiveEmailInput = new TextField("luo_hai_jiao@163.com");
+    private final TextField titleInput = new TextField("20191002914给老师的一封邮件");
 
     // TCP客户端
-    private TCPClient tcpClient;
+    private TCPClient tcpClient = new TCPClient("smtp.qq.com", "25");
 
     // 线程
     private Thread receiveThread;
+
+    public TCPMailClientFX2() throws IOException {
+    }
 
     public static void main(String[] args) {
         launch(args);
@@ -100,10 +107,12 @@ public class TCPMailClientFX1 extends Application {
         );
         btnSend.setOnAction((event) -> {
             try {
-//                tcpClient.sendMail("smtp.qq.com","ccqstark@qq.com");
+                tcpClient.sendMail(ipInput.getText(), receiveEmailInput.getText(),
+                        titleInput.getText(), tfSend.getText());
             } catch (Exception e) {
                 e.printStackTrace();
             }
+            startReceiveThread();
         });
         TextFileIO textFileIO = new TextFileIO();
         btnSave.setOnAction((event) ->
@@ -153,33 +162,52 @@ public class TCPMailClientFX1 extends Application {
         BorderPane mainPane = new BorderPane();
 
         // ip和端口输入区
-        FlowPane flowPane = new FlowPane();
-        flowPane.setHgap(10);
-        flowPane.setVgap(20);
-        flowPane.setPadding(new Insets(15, 15, 15, 15));
-        flowPane.getChildren().addAll(new Label("IP地址:"), ipInput, new Label("端口:"), portInput, btnConnect);
-        mainPane.setTop(flowPane);
+        VBox topVbox = new VBox();
+        FlowPane flowPane1 = new FlowPane();
+        flowPane1.setHgap(10);
+        flowPane1.setVgap(20);
+        flowPane1.setPadding(new Insets(15, 15, 15, 15));
+        flowPane1.getChildren().addAll(new Label("IP地址:"), ipInput, new Label("端口:"), portInput);
+
+        FlowPane flowPane2 = new FlowPane();
+        flowPane2.setHgap(10);
+        flowPane2.setVgap(20);
+        flowPane2.setPadding(new Insets(15, 15, 15, 15));
+        flowPane2.getChildren().addAll(new Label("邮件发送者地址："), sendEmailInput, new Label("邮件接收者地址："), receiveEmailInput);
+
+        FlowPane flowPane3 = new FlowPane();
+        flowPane3.setHgap(10);
+        flowPane3.setVgap(20);
+        flowPane3.setPadding(new Insets(15, 15, 15, 15));
+        flowPane3.getChildren().addAll(new Label("邮件标题："), titleInput);
+
+        topVbox.getChildren().addAll(flowPane1, flowPane2, flowPane3);
+        mainPane.setTop(topVbox);
 
         //内容显示区域
-        VBox vBox = new VBox();
-        vBox.setSpacing(10);//各控件之间的间隔
+        HBox hbox = new HBox();
+        hbox.setSpacing(20);//各控件之间的间隔
         //VBox面板中的内容距离四周的留空区域
-        vBox.setPadding(new Insets(10, 20, 10, 20));
-        vBox.getChildren().addAll(new Label("信息显示区："),
-                taDisplay, new Label("信息输入区："), tfSend);
+        hbox.setPadding(new Insets(10, 20, 10, 20));
+        VBox emailTextBox = new VBox();
+        emailTextBox.getChildren().addAll(new Label("邮件正文："), tfSend);
+        VBox feedbackBox = new VBox();
+        feedbackBox.getChildren().addAll(new Label("服务器反馈："), taDisplay);
+        hbox.getChildren().addAll(emailTextBox, feedbackBox);
 
         //设置显示信息区的文本区域可以纵向自动扩充范围
+        VBox.setVgrow(tfSend, Priority.ALWAYS);
         VBox.setVgrow(taDisplay, Priority.ALWAYS);
-        mainPane.setCenter(vBox);
+        mainPane.setCenter(hbox);
 
         //底部按钮区域
-        HBox hBox = new HBox();
-        hBox.setSpacing(10);
-        hBox.setPadding(new Insets(10, 20, 10, 20));
-        hBox.setAlignment(Pos.CENTER_RIGHT);
-        hBox.getChildren().addAll(btnSend, btnSave, btnOpen, btnExit);
-        mainPane.setBottom(hBox);
-        Scene scene = new Scene(mainPane, 700, 400);
+        HBox buttonBox = new HBox();
+        buttonBox.setSpacing(10);
+        buttonBox.setPadding(new Insets(10, 20, 10, 20));
+        buttonBox.setAlignment(Pos.CENTER_RIGHT);
+        buttonBox.getChildren().addAll(btnSend, btnExit);
+        mainPane.setBottom(buttonBox);
+        Scene scene = new Scene(mainPane, 700, 550);
 
         primaryStage.setScene(scene);
 
@@ -201,6 +229,7 @@ public class TCPMailClientFX1 extends Application {
             String msg = null;
             try {
                 while ((msg = tcpClient.receive()) != null) {
+                    System.out.println(msg);
                     // 有效final使得lambda可以访问外部的局部变量
                     String msgTemp = msg;
                     Platform.runLater(() -> {

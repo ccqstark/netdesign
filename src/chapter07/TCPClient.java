@@ -2,12 +2,15 @@ package chapter07;
 
 import java.io.*;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
+
+import static java.lang.Thread.sleep;
 
 public class TCPClient {
 
     private Socket socket; // 定义套接字
     // 定义字符输入流和输出流
-    private  BufferedReader reader;
+    private BufferedReader reader;
     private OutputStreamWriter writer;
 
     public TCPClient(String ip, String port) throws IOException {
@@ -17,14 +20,15 @@ public class TCPClient {
 
         // 得到网络输出字节流地址，并封装成网络输出字符流
         InputStream is = socket.getInputStream();
-        reader = new BufferedReader(new InputStreamReader(is, "utf-8"));
+        reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
         OutputStream os = socket.getOutputStream();
-        writer = new OutputStreamWriter(os, "gbk");
+        writer = new OutputStreamWriter(os, StandardCharsets.UTF_8);
     }
 
-    public void send(String msg) throws IOException {
-        writer.write(msg+"\r\n");
+    public void send(String msg) throws IOException, InterruptedException {
+        writer.write(msg);
         writer.flush();
+        sleep(100);
     }
 
     public String receive() {
@@ -51,36 +55,28 @@ public class TCPClient {
         }
     }
 
-    public void sendMail(String host, String dest) throws Exception {
+    public void sendMail(String host, String dest, String subject, String emailText) throws Exception {
 
-        // smtp是25端口
-        Socket socket = new Socket(host, 25);
+        this.send("HELO a\r\n");
+        this.send("auth login\r\n");
+        this.send("ODQ0MzA5MDYxQHFxLmNvbQ==\r\n");
+        this.send("enVmZm5nenJza29yYmViYg==\r\n");
+        this.send("MAIL FROM:<844309061@qq.com>\r\n");
+        this.send("RCPT TO:<" + dest + ">\r\n");    // 确认接收者
+        this.send("DATA\r\n");
 
-        InputStream is = socket.getInputStream();
-        BufferedReader reader = new BufferedReader(new InputStreamReader(is, "utf-8"));
-        OutputStream os = socket.getOutputStream();
-        OutputStreamWriter writer = new OutputStreamWriter(os, "gbk");
+        this.send("From:" + "844309061@qq.com" + "\r\n");
+        this.send("Subject:" + subject + "\r\n");
+        this.send("To:" + dest + "\r\n");
 
-        writer.write("HELO a\r\n");
-        writer.write("auth login\r\n");
-        writer.write("Y2Nxc3RhcmtAcXEuY29t\r\n");
-        writer.write("cXprdG54aW5xdWZwampiZw==\r\n");
-        writer.write("MAIL FROM:<ccqstark@qq.com>\r\n");
-        writer.write("RCPT TO:<" + dest + ">\r\n");	// 确认接收者
-        writer.write("DATA\r\n");
+        this.send("\r\n");
 
         // 正文
-        writer.write("这是一封自动发送的邮件\r\n");
+        this.send(emailText + "\r\n");
 
-        writer.write("\r\n.\r\n");	// 正文结束
-        writer.write("QUIT\r\n");
-        writer.flush();
+        this.send(".\r\n");    // 正文结束
+        this.send("QUIT\r\n");
 
-        // 读取回传的信息
-//        String line;
-//        while((line=reader.readLine()) != null) {
-//            System.out.println(line);
-//        }
     }
 
 }

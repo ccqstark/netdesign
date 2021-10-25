@@ -2,7 +2,7 @@ package chapter07;
 
 public class BASE64 {
     public static void main(String[] args) {
-        String userName = "ccqstark@qq.com";
+        String userName = "1367305698@qq.com";
         String authCode = "qzktnxinqufpjjbg";
         //显示邮箱名的base64编码结果
         System.out.println(encode(userName));
