@@ -18,6 +18,7 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.URL;
+import java.util.regex.Pattern;
 
 
 import static java.lang.Thread.sleep;
@@ -49,17 +50,24 @@ public class URLClientFX extends Application {
     public void sendSocketMsg() {
         taDisplay.clear();
         String address = tfSend.getText().trim();
-        try {
-            URL url = new URL(address);
-            System.out.printf("连接%s成功！", address);
-            //获得url的字节流输入
-            InputStream in = url.openStream();
-            //装饰成字符输入流
-            httpClient.setBr(new BufferedReader(new InputStreamReader(in, "utf-8")));
-        } catch (Exception e) {
-            e.printStackTrace();
+
+        String regex = "^([hH][tT]{2}[pP]:/*|[hH][tT]{2}[pP][sS]:/*|[fF][tT][pP]:/*)(([A-Za-z0-9-~]+).)+([A-Za-z0-9-~\\/])+(\\?{0,1}(([A-Za-z0-9-~]+\\={0,1})([A-Za-z0-9-~]*)\\&{0,1})*)$";
+        Pattern pattern = Pattern.compile(regex);
+        if (!pattern.matcher(address).matches()) {
+            taDisplay.appendText("非法网址！");
+        } else {
+            try {
+                URL url = new URL(address);
+                System.out.printf("连接%s成功！", address);
+                //获得url的字节流输入
+                InputStream in = url.openStream();
+                //装饰成字符输入流
+                httpClient.setBr(new BufferedReader(new InputStreamReader(in, "utf-8")));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            startReceiveThread();
         }
-        startReceiveThread();
     }
 
     @Override

@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="feat:chapter07">
-      <change afterPath="$PROJECT_DIR$/src/chapter08/HTTPAllClientThreadFX.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter08/HTTPClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter08/HTTPSClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter08/URLClientFX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="feat:chapter08预习" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -271,7 +265,7 @@
       <workItem from="1635178405866" duration="30000" />
       <workItem from="1635268207099" duration="454000" />
       <workItem from="1635685850980" duration="2569000" />
-      <workItem from="1635689345657" duration="1394000" />
+      <workItem from="1635689345657" duration="1422000" />
     </task>
     <task id="LOCAL-00001" summary="测试多电脑">
       <created>1630922423339</created>
@@ -371,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635157977267</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="feat:chapter08预习">
+      <created>1635690995147</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1635690995147</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -436,7 +437,8 @@
     <MESSAGE value="feat:chapter06组播" />
     <MESSAGE value="feat:chapter07预习" />
     <MESSAGE value="feat:chapter07" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:chapter07" />
+    <MESSAGE value="feat:chapter08预习" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:chapter08预习" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/jdk1.8.0_261_32bit/javafx-src.zip!/javafx/scene/control/ButtonBase.java">
