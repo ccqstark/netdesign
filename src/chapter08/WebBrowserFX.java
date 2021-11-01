@@ -1,6 +1,5 @@
 package chapter08;
 
-
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.geometry.Insets;
@@ -12,18 +11,23 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.*;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.VBox;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
-
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.regex.Pattern;
 
-
 import static java.lang.Thread.sleep;
 
-public class URLClientFX extends Application {
+public class WebBrowserFX extends Application {
 
     private final Button btnExit = new Button("退出");
     private final Button btnSend = new Button("发送");
@@ -32,6 +36,8 @@ public class URLClientFX extends Application {
     private final TextField tfSend = new TextField();
     //显示信息的文本区域
     private final TextArea taDisplay = new TextArea();
+    // 显示网页
+    WebView webView = new WebView();
 
     // TCP客户端
     private HTTPClient httpClient = new HTTPClient();
@@ -58,8 +64,8 @@ public class URLClientFX extends Application {
         } else {
             try {
                 URL url = new URL(address);
-                System.out.println(url.getUserInfo());
-                System.out.printf("连接%s成功！", address);
+                WebEngine webEngine = webView.getEngine();
+                webEngine.load(address);
                 //获得url的字节流输入
                 InputStream in = url.openStream();
                 //装饰成字符输入流
@@ -104,7 +110,7 @@ public class URLClientFX extends Application {
         //VBox面板中的内容距离四周的留空区域
         vBox.setPadding(new Insets(10, 20, 10, 20));
         vBox.getChildren().addAll(new Label("信息显示区："),
-                taDisplay, new Label("输入URL地址："), tfSend);
+                webView, new Label("输入URL地址："), tfSend);
 
         //设置显示信息区的文本区域可以纵向自动扩充范围
         VBox.setVgrow(taDisplay, Priority.ALWAYS);

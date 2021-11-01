@@ -63,12 +63,13 @@ public class HTTPAllClientThreadFX extends Application {
 
     public void sendSocketMsg() {
         StringBuffer stringBuffer = new StringBuffer();
-        stringBuffer.append("GET / HTTP/1.1\n");
-        stringBuffer.append(String.format("HOST: %s\n", ipInput.getText()));
-        stringBuffer.append("Accept: */*\n");
-        stringBuffer.append("Accept-Language: zh-cn\n");
-        stringBuffer.append("User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36\n");
-        stringBuffer.append("Connection: Keep-Alive\n");
+        stringBuffer.append("GET / HTTP/1.1\r\n");
+        stringBuffer.append(String.format("HOST: %s\r\n", ipInput.getText()));
+        stringBuffer.append("Accept: */*\r\n");
+        stringBuffer.append("Accept-Language: zh-cn\r\n");
+        stringBuffer.append("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36\r\n");
+        stringBuffer.append("Connection: Keep-Alive\r\n");
+        stringBuffer.append("sec-ch-ua-platform: \"macOS\"\r\n");
         if (httpClient != null) {
             httpClient.send(stringBuffer.toString());
         }
