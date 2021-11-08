@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="feat:chapter08网址校验">
-      <change afterPath="$PROJECT_DIR$/src/chapter08/WebBrowserFX.java" afterDir="false" />
+    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="feat:chapter08webview">
+      <change afterPath="$PROJECT_DIR$/src/chapter09/HostScannerFX.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter08/HTTPAllClientThreadFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter08/HTTPAllClientThreadFX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chapter08/URLClientFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chapter08/URLClientFX.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +145,9 @@
     <property name="project.structure.side.proportion" value="0.27147403" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/chapter03" />
@@ -157,13 +158,26 @@
       <recent name="chapter05" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WebBrowserFX">
+  <component name="RunManager" selected="Application.HostScannerFX">
     <configuration name="HTTPAllClientThreadFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chapter08.HTTPAllClientThreadFX" />
       <module name="netdesign" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="chapter08.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HostScannerFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter09.HostScannerFX" />
+      <module name="netdesign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter09.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -197,19 +211,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="URLClientFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chapter08.URLClientFX" />
-      <module name="netdesign" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chapter08.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="WebBrowserFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chapter08.WebBrowserFX" />
       <module name="netdesign" />
@@ -224,19 +225,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.TCPClientThreadFX" />
       <item itemvalue="Application.HTTPAllClientThreadFX" />
-      <item itemvalue="Application.URLClientFX" />
       <item itemvalue="Application.LookUpScoreFX" />
       <item itemvalue="Application.WebBrowserFX" />
+      <item itemvalue="Application.HostScannerFX" />
+      <item itemvalue="Application.TCPClientThreadFX" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.WebBrowserFX" />
-        <item itemvalue="Application.URLClientFX" />
-        <item itemvalue="Application.HTTPAllClientThreadFX" />
+        <item itemvalue="Application.HostScannerFX" />
         <item itemvalue="Application.LookUpScoreFX" />
         <item itemvalue="Application.TCPClientThreadFX" />
+        <item itemvalue="Application.HTTPAllClientThreadFX" />
+        <item itemvalue="Application.WebBrowserFX" />
       </list>
     </recent_temporary>
   </component>
@@ -272,7 +273,8 @@
       <workItem from="1635685850980" duration="2569000" />
       <workItem from="1635689345657" duration="1422000" />
       <workItem from="1635691426052" duration="314000" />
-      <workItem from="1635734147571" duration="3306000" />
+      <workItem from="1635734147571" duration="3654000" />
+      <workItem from="1636335681595" duration="5717000" />
     </task>
     <task id="LOCAL-00001" summary="测试多电脑">
       <created>1630922423339</created>
@@ -386,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635691738136</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="feat:chapter08webview">
+      <created>1635740263048</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1635740263048</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -453,7 +462,8 @@
     <MESSAGE value="feat:chapter07" />
     <MESSAGE value="feat:chapter08预习" />
     <MESSAGE value="feat:chapter08网址校验" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:chapter08网址校验" />
+    <MESSAGE value="feat:chapter08webview" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:chapter08webview" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/jdk1.8.0_261_32bit/javafx-src.zip!/javafx/scene/control/ButtonBase.java">
