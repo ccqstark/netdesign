@@ -57,6 +57,12 @@ public class UDPClientFX extends Application {
         }
 
         String sendMsg = tfSend.getText();
+//        StringBuffer stringBuffer = new StringBuffer();
+//        stringBuffer.append("20191002914&陈楚权\n");
+//        stringBuffer.append("1636948580:876479 /192.168.236.133->/202.116.192.5 protocol(6) priority(0)  hop(128)  offset(0) ident(7147) TCP 5992 > 443 seq(3857211571) win(8192)  S\n");
+//        stringBuffer.append("1636948580:877655 /202.116.192.5->/192.168.236.133 protocol(6) priority(0)  hop(59)  offset(0) ident(0) TCP 443 > 5992 seq(1207980547) win(29200) ack 3857211572  S\n");
+//        stringBuffer.append("1636948580:877763 /192.168.236.133->/202.116.192.5 protocol(6) priority(0)  hop(128)  offset(0) ident(7148) TCP 5992 > 443 seq(3857211572) win(256) ack 1207980548\n");
+//        udpClient.send(stringBuffer.toString());
         udpClient.send(sendMsg);
         taDisplay.appendText("客户端发送: " + sendMsg + "\n");
 

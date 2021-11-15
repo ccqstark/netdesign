@@ -79,6 +79,8 @@ public class ConfigDialog {
                 jpcapCaptor = JpcapCaptor.openDevice(networkInterface,snapLen,
                         promisc,20);
                 jpcapCaptor.setFilter(tfFilter.getText().trim(),true);
+//                jpcapCaptor.setFilter("dst host 202.116.192.5",true);
+//                jpcapCaptor.setFilter("dst port 443", true);
                 stage.hide();
 
             } catch (Exception e) {

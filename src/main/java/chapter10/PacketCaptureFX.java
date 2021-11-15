@@ -91,6 +91,14 @@ public class PacketCaptureFX extends Application {
             captureThread.start();
         });
 
+        btnStopCapture.setOnAction(event -> {
+            interrupt("captureThread");
+        });
+
+        btnExit.setOnAction(event -> {
+            interrupt("captureThread");
+            System.exit(0);
+        });
 
         btnClear.setOnAction((event) ->
                 taDisplay.clear()
@@ -161,7 +169,7 @@ public class PacketCaptureFX extends Application {
             Platform.runLater(()->{
                 System.out.println(packet.toString());
                 // 在显示区显示抓包原始信息
-                taDisplay.appendText(packet.toString());
+                taDisplay.appendText(packet.toString() + "\n");
             });
         }
     }
