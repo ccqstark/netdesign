@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="feat:chapter10尝试" />
+    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="feat:chapter10尝试">
+      <change afterPath="$PROJECT_DIR$/src/main/java/chapter10/ConfigDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/chapter10/PacketCaptureFX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,9 +34,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_301.jdk/Contents/Home/src.zip!/java/io/File.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -131,6 +133,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1630901749081" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -156,7 +159,7 @@
       <recent name="chapter05" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.PacketCaptureFX">
     <configuration name="Example1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.sourceforge.jpcap.tutorial.example1.Example1" />
       <module name="netdesign" />
@@ -196,12 +199,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TCPClientThreadFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chapter03.TCPClientThreadFX" />
+    <configuration name="PacketCaptureFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter10.PacketCaptureFX" />
       <module name="netdesign" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter03.*" />
+          <option name="PATTERN" value="chapter10.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -222,20 +225,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.LookUpScoreFX" />
       <item itemvalue="Application.HostScannerFX" />
-      <item itemvalue="Application.TCPClientThreadFX" />
       <item itemvalue="Application.Example1" />
       <item itemvalue="Application.Test" />
+      <item itemvalue="Application.PacketCaptureFX" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PacketCaptureFX" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.Example1" />
         <item itemvalue="Application.HostScannerFX" />
         <item itemvalue="Application.LookUpScoreFX" />
-        <item itemvalue="Application.TCPClientThreadFX" />
       </list>
     </recent_temporary>
   </component>
@@ -274,6 +288,7 @@
       <workItem from="1635734147571" duration="3654000" />
       <workItem from="1636335681595" duration="6136000" />
       <workItem from="1636891318466" duration="1464000" />
+      <workItem from="1636908716634" duration="5062000" />
     </task>
     <task id="LOCAL-00001" summary="测试多电脑">
       <created>1630922423339</created>
