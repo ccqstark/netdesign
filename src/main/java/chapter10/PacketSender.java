@@ -1,4 +1,4 @@
-package chapter11;
+package chapter10;
 
 import jpcap.JpcapCaptor;
 import jpcap.JpcapSender;
@@ -9,7 +9,6 @@ import jpcap.packet.TCPPacket;
 
 import java.io.IOException;
 import java.net.InetAddress;
-import java.util.Scanner;
 
 /**
  * 封装Jpcap发包功能
