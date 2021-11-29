@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="feat:chapter10尝试" />
+    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="feat:chapter10.2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/chapter12/client/HelloClientFX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/chapter12/server/HelloServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/chapter12/server/HelloServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rmi/HelloService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,7 +162,7 @@
       <recent name="chapter05" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.HelloClientFX">
     <configuration name="Example1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.sourceforge.jpcap.tutorial.example1.Example1" />
       <module name="netdesign" />
@@ -170,38 +176,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HelloClientFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter12.client.HelloClientFX" />
+      <module name="netdesign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter12.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HelloServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter12.server.HelloServer" />
+      <module name="netdesign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter12.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HostScannerFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chapter09.HostScannerFX" />
       <module name="netdesign" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="chapter09.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LookUpScoreFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lookupscore.LookUpScoreFX" />
-      <module name="netdesign" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lookupscore.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TCPClientThreadFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chapter03.TCPClientThreadFX" />
-      <module name="netdesign" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chapter03.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -223,19 +229,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.LookUpScoreFX" />
       <item itemvalue="Application.HostScannerFX" />
-      <item itemvalue="Application.TCPClientThreadFX" />
       <item itemvalue="Application.Example1" />
       <item itemvalue="Application.Test" />
+      <item itemvalue="Application.HelloClientFX" />
+      <item itemvalue="Application.HelloServer" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HelloClientFX" />
+        <item itemvalue="Application.HelloServer" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.Example1" />
         <item itemvalue="Application.HostScannerFX" />
-        <item itemvalue="Application.LookUpScoreFX" />
-        <item itemvalue="Application.TCPClientThreadFX" />
       </list>
     </recent_temporary>
   </component>
@@ -275,6 +281,11 @@
       <workItem from="1636335681595" duration="6136000" />
       <workItem from="1636891318466" duration="1484000" />
       <workItem from="1637295414144" duration="21000" />
+      <workItem from="1637553025631" duration="770000" />
+      <workItem from="1637583298462" duration="105000" />
+      <workItem from="1637583433444" duration="136000" />
+      <workItem from="1638147050827" duration="151000" />
+      <workItem from="1638148980290" duration="719000" />
     </task>
     <task id="LOCAL-00001" summary="测试多电脑">
       <created>1630922423339</created>
@@ -416,7 +427,21 @@
       <option name="project" value="LOCAL" />
       <updated>1636892818248</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="feat:chapter11">
+      <created>1637553129452</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1637553129452</updated>
+    </task>
+    <task id="LOCAL-00022" summary="feat:chapter10.2">
+      <created>1637553193742</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1637553193742</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -487,7 +512,9 @@
     <MESSAGE value="feat:chapter08webview" />
     <MESSAGE value="feat:chapter09扫描" />
     <MESSAGE value="feat:chapter10尝试" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:chapter10尝试" />
+    <MESSAGE value="feat:chapter11" />
+    <MESSAGE value="feat:chapter10.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:chapter10.2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/jdk1.8.0_261_32bit/javafx-src.zip!/javafx/scene/control/ButtonBase.java">
