@@ -11,7 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import chapter12.rmi.HelloService;
+import rmi.HelloService;
 
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -84,7 +84,7 @@ public class HelloClientFX extends Application {
             //(2)客户端(调用端)到注册器中使用助记符寻找并创建远程服务对象的客户端(调用端)stub，之后本地调用helloService的方法，实质就是调用了远程服务器上同名的远程接口下的同名方法
             helloService = (HelloService)registry.lookup("HelloService");
             //另外一种创建stub的方式
-            //helloService = (HelloService)Naming.lookup("chapter12.rmi://127.0.0.1:1099/" + "HelloService");
+            //helloService = (HelloService)Naming.lookup("rmi://127.0.0.1:1099/" + "HelloService");
 
         } catch (Exception e) {
             e.printStackTrace();

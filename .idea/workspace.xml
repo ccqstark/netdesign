@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="feat:chapter10.2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/chapter12/client/HelloClientFX.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chapter12/server/HelloServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chapter12/server/HelloServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rmi/HelloService.java" afterDir="false" />
+    <list default="true" id="bd3eb785-442d-48be-8715-cf3b2cc612ef" name="Default Changelist" comment="feat:chapter12预习">
+      <change afterPath="$PROJECT_DIR$/src/main/java/chapter12/RmiKitServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/chapter12/RmiStudentClientFX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/chapter12/RmiStudentServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rmi/RmiKitService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rmi/RmiMsgService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chapter12/client/HelloClientFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chapter12/client/HelloClientFX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chapter12/rmi/HelloService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rmi/HelloService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chapter12/server/HelloServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chapter12/server/HelloServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chapter12/server/HelloServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chapter12/server/HelloServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +30,9 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -156,26 +162,16 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/chapter03" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="chapter08" />
       <recent name="chapter07" />
       <recent name="chapter05" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HelloClientFX">
-    <configuration name="Example1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="net.sourceforge.jpcap.tutorial.example1.Example1" />
-      <module name="netdesign" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.sourceforge.jpcap.tutorial.example1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.RmiStudentServer">
     <configuration name="HelloClientFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chapter12.client.HelloClientFX" />
       <module name="netdesign" />
@@ -202,12 +198,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HostScannerFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chapter09.HostScannerFX" />
+    <configuration name="LookUpScoreFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lookupscore.LookUpScoreFX" />
       <module name="netdesign" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter09.*" />
+          <option name="PATTERN" value="lookupscore.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -215,12 +211,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chapter10.Test" />
+    <configuration name="RmiStudentClientFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter12.RmiStudentClientFX" />
       <module name="netdesign" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chapter10.*" />
+          <option name="PATTERN" value="chapter12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RmiStudentServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chapter12.RmiStudentServer" />
+      <module name="netdesign" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter12.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -229,19 +238,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.HostScannerFX" />
-      <item itemvalue="Application.Example1" />
-      <item itemvalue="Application.Test" />
       <item itemvalue="Application.HelloClientFX" />
       <item itemvalue="Application.HelloServer" />
+      <item itemvalue="Application.RmiStudentClientFX" />
+      <item itemvalue="Application.LookUpScoreFX" />
+      <item itemvalue="Application.RmiStudentServer" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RmiStudentServer" />
+        <item itemvalue="Application.LookUpScoreFX" />
+        <item itemvalue="Application.RmiStudentClientFX" />
         <item itemvalue="Application.HelloClientFX" />
         <item itemvalue="Application.HelloServer" />
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.Example1" />
-        <item itemvalue="Application.HostScannerFX" />
       </list>
     </recent_temporary>
   </component>
@@ -285,7 +294,7 @@
       <workItem from="1637583298462" duration="105000" />
       <workItem from="1637583433444" duration="136000" />
       <workItem from="1638147050827" duration="151000" />
-      <workItem from="1638148980290" duration="719000" />
+      <workItem from="1638148980290" duration="5893000" />
     </task>
     <task id="LOCAL-00001" summary="测试多电脑">
       <created>1630922423339</created>
@@ -441,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637553193742</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="feat:chapter12预习">
+      <created>1638149827205</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1638149827205</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -514,7 +530,8 @@
     <MESSAGE value="feat:chapter10尝试" />
     <MESSAGE value="feat:chapter11" />
     <MESSAGE value="feat:chapter10.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:chapter10.2" />
+    <MESSAGE value="feat:chapter12预习" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:chapter12预习" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/jdk1.8.0_261_32bit/javafx-src.zip!/javafx/scene/control/ButtonBase.java">
