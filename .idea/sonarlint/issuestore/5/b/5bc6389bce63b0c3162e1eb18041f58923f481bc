@@ -1,0 +1,14 @@
+
+G
+java:S16025",Remove useless curly braces around statement(ÒÌâ–øÿÿÿÿ
+P
+java:S16124":Replace this lambda with method reference 'this::initRmi'.(ÿã×´
+X	java:S125f"<This block of commented-out lines of code should be removed.(¬²Ïè8¦Ø—ïØ/
+]	java:S125h"<This block of commented-out lines of code should be removed.(€»ŠÇûÿÿÿÿ8¦Ø—ïØ/
+N	java:S106n"9Replace this use of System.out or System.err by a logger.(«‹Îõ
+H
+java:S1602´",Remove useless curly braces around statement(ÒÌâ–øÿÿÿÿ
+H
+java:S1602¼",Remove useless curly braces around statement(ÒÌâ–øÿÿÿÿ
+g	java:S117‚"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ÎƒÖ
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ºÕó&

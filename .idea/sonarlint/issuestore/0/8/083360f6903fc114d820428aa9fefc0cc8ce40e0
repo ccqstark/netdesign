@@ -1,0 +1,10 @@
+
+V
+java:S18545";Remove this useless assignment to local variable "isLogin".(àò®ãşÿÿÿÿ
+Q
+java:S2864,"4Iterate over the "entrySet" instead of the "keySet".(Í«ÊĞ8‡³äîØ/
+]	java:S125""<This block of commented-out lines of code should be removed.(•ˆŞŠùÿÿÿÿ8ÜäîØ/
+]	java:S125("<This block of commented-out lines of code should be removed.(öšÊÀûÿÿÿÿ8÷´”ïØ/
+V
+java:S2864V"4Iterate over the "entrySet" instead of the "keySet".(‘™ıÿÿÿÿÿ8èÁ“ïØ/
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º¨á¸üÿÿÿÿ

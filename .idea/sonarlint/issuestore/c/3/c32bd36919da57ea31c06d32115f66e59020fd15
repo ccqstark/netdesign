@@ -1,0 +1,18 @@
+
+K
+java:S2696B"6Make the enclosing method "static" or remove this set.(ÃýˆP
+N
+java:S1611P"3Remove the parentheses around the "event" parameter(Çä¸ìøÿÿÿÿ
+G
+java:S1602P",Remove useless curly braces around statement(Çä¸ìøÿÿÿÿ
+I
+java:S1611T"3Remove the parentheses around the "event" parameter(½æ³Œ
+B
+java:S1602T",Remove useless curly braces around statement(½æ³Œ
+I
+java:S1611X"3Remove the parentheses around the "event" parameter(Žþƒ©
+Q
+java:S2696w"6Make the enclosing method "static" or remove this set.(¡þµíúÿÿÿÿ
+C
+java:S1602 ",Remove useless curly braces around statement(¯ý‹ª
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æ–·Èþÿÿÿÿ
